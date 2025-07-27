@@ -6,120 +6,108 @@
 
 body, html {
   height: 100%;
-  overflow: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   background-color: #fff;
 }
 
-header {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: 1rem 3rem;
   background-color: #f9fbff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
 
-.nav-bar {
+.logo{
   font-size: 1.5rem;
   font-weight: bold;
+  color: #333;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 2rem;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  transition: color 0.3s;
 }
 
-.user-btn {
-  padding: 10px 20px;
-  background-color: #e6f4ff;
-  border: none;
-  border-radius: 10px;
+.nav-links a:hover{
   color: #df7c9a;
-  font-weight: 600;
+}
+
+.username {
+  background-color: #e6f4ff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: #df7c9a;
+  font-weight: bold;
   cursor: pointer;
 }
 
-.main {
+.hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px;
-  height: 100vh;
+  padding: 2rem 5%;
+  height: 90vh;
   box-sizing: border-box;
-  gap: 30px;
+  background: #fff;
 }
 
-.main-text {
+.hero-left {
   flex: 1;
-  padding-right: 40px;
-  max-height: 100%;
-  overflow: hidden;
+  max-width: 50%;
 }
 
-.main-text h1 {
-  font-size: 3.5rem;
-  line-height: 1.2;
-  margin-bottom: 20px;
+.hero-left h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
   color: #2e2e2e;
 }
 
-.highlight {
+.hero-left .highlight {
   color: #df7c9a;
-  font-weight: bold;
 }
 
-.main-text p {
-  font-size: 1.1rem;
+.hero-left p {
+  font-size: 1rem;
   color: #555;
-  margin-bottom: 30px;
-  max-width: 500px;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
-.cta-button {
+.hero-left button {
   display: inline-block;
   background-color: #df7c9a;
   color: white;
-  padding: 15px 25px;
-  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
   font-size: 1rem;
+  transition: background 0.3;
 }
 
-.main-image{
+.hero-left button:hover{
+  background-color: #df7c9a;
+}
+
+.hero-right{
   flex: 1;
   text-align: center;
 }
 
-.main-image img {
-  max-height: 80vh;
-  max-width: 100%;
-  object-fit: contain;
-  /* display: flexbox; */
-}
-
-@media(max-width: 768px){
-  main{
-    flex-direction: column;
-    height: auto;
-    padding: 40px 20px;
-  }
-
-  .main-text{
-    padding: 0;
-    text-align: center;
-  }
-
-  .main-image img{
-    max-height: 50vh;
-  }
+.hero-right img {
+  max-width: 90%;
+  height: auto;
 }
